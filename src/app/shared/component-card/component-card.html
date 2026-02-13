@@ -1,0 +1,13 @@
+<a [routerLink]="item.route" class="card" [class.card-css]="item.category === 'css'" [class.card-js]="item.category === 'js'">
+  <div class="card-icon">{{ item.icon }}</div>
+  <div class="card-body">
+    <h3 class="card-title">{{ item.title }}</h3>
+    <p class="card-desc">{{ item.description }}</p>
+    <div class="card-tags">
+      @for (tag of item.tags; track tag) {
+        <span class="tag" [class.tag-css]="item.category === 'css'" [class.tag-js]="item.category === 'js'">{{ tag }}</span>
+      }
+    </div>
+  </div>
+  <div class="card-arrow">→</div>
+</a>

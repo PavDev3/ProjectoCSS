@@ -1,0 +1,20 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <a routerLink="/" class="nav-logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span class="logo-text">CSS<span class="logo-accent">Portfolio</span></span>
+    </a>
+
+    <div class="nav-links" [class.open]="menuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">Home</a>
+      <a routerLink="/css-animations" routerLinkActive="active" (click)="closeMenu()">CSS Animations</a>
+      <a routerLink="/javascript" routerLinkActive="active" (click)="closeMenu()">JavaScript</a>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

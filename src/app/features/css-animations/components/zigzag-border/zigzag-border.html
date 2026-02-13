@@ -1,0 +1,34 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/css-animations">CSS Animations</a><span>/</span>
+        <span>Zigzag Border</span>
+      </nav>
+      <h1>Zigzag Border Animation</h1>
+      <p>Cards with an animated gradient border that continuously shifts using background-position keyframes.</p>
+    </div>
+    <div class="demo-wrapper" style="gap:40px; flex-wrap:wrap;">
+      <div class="zigzag-card zc1">
+        <h3>Angular</h3>
+        <p>Component-based framework for building scalable web applications.</p>
+        <span class="card-tag">Framework</span>
+      </div>
+      <div class="zigzag-card zc2">
+        <h3>TypeScript</h3>
+        <p>Typed superset of JavaScript that compiles to plain JavaScript.</p>
+        <span class="card-tag">Language</span>
+      </div>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li>Pseudo-elemento <strong>::before</strong> con background gradient y inset negativo</li>
+        <li><strong>@keyframes</strong> animando <strong>background-position</strong> para mover el borde</li>
+        <li><strong>background-size: 300% 300%</strong> para un gradiente más largo que animate</li>
+        <li>Efecto de borde "vivo" en movimiento continuo — totalmente CSS</li>
+      </ul>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/css-animations">CSS Animations</a><span>/</span>
+        <span>Loading Spinner</span>
+      </nav>
+      <h1>Loading Spinner</h1>
+      <p>Orbiting dots loading animation using staggered CSS animation delays on 5 identical elements.</p>
+    </div>
+    <div class="demo-wrapper" style="gap:60px; flex-wrap:wrap;">
+      <div class="spinner">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <div class="spinner spinner-magenta">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <div class="spinner spinner-green">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li>5 divs con <strong>animation-delay</strong> escalonado (0s, 0.15s, 0.30s, 0.45s, 0.60s)</li>
+        <li>Cada punto: <strong>rotate(0deg) translateY(-200%)</strong> → <strong>rotate(360deg)</strong></li>
+        <li>Combinación de rotación + traslación crea el efecto orbital</li>
+        <li>Duración de 1.25s en loop infinito</li>
+      </ul>
+    </div>
+  </div>
+</main>

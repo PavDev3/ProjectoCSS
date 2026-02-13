@@ -1,0 +1,48 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/javascript">JavaScript</a><span>/</span>
+        <span>Countdown Timer</span>
+      </nav>
+      <h1>Countdown Timer</h1>
+      <p>Set a future date and watch the live countdown. Built with Angular Signals and setInterval.</p>
+    </div>
+    <div class="demo-wrapper" style="flex-direction:column; gap:32px;">
+      @if (expired()) {
+        <div class="expired-msg">🎉 ¡Tiempo cumplido!</div>
+      }
+
+      <div class="countdown-display" [class.active]="isRunning()">
+        <div class="time-block">
+          <span class="time-num">{{ days() | number:'2.0-0' }}</span>
+          <span class="time-label">Días</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span class="time-num">{{ hours() | number:'2.0-0' }}</span>
+          <span class="time-label">Horas</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span class="time-num">{{ minutes() | number:'2.0-0' }}</span>
+          <span class="time-label">Min</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span class="time-num">{{ seconds() | number:'2.0-0' }}</span>
+          <span class="time-label">Seg</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <input type="datetime-local" [(ngModel)]="targetDate" class="date-input" />
+        <div class="btn-row">
+          <button (click)="start()" class="ctrl-btn start-btn" [disabled]="!targetDate">Iniciar</button>
+          <button (click)="reset()" class="ctrl-btn reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

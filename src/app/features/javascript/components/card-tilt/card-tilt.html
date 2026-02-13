@@ -1,0 +1,34 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/javascript">JavaScript</a><span>/</span>
+        <span>3D Card Tilt</span>
+      </nav>
+      <h1>3D Card Tilt Effect</h1>
+      <p>Hover over the cards to see the mouse-tracking 3D perspective tilt effect with dynamic glow.</p>
+    </div>
+    <div class="demo-wrapper" style="gap:32px; flex-wrap:wrap;">
+      @for (card of cards3d; track card.title) {
+        <div class="tilt-card" #tiltCard [style.--card-color]="card.color">
+          <div class="card-glow"></div>
+          <div class="card-inner">
+            <span class="card-icon">{{ card.icon }}</span>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.subtitle }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li><strong>mousemove</strong> event para calcular posición relativa del cursor</li>
+        <li><strong>perspective(600px) rotateX() rotateY()</strong> para el efecto 3D</li>
+        <li><strong>radial-gradient</strong> dinámico en el glow siguiendo al cursor</li>
+        <li>Angular <strong>ViewChildren</strong> + manipulación directa del DOM</li>
+      </ul>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/css-animations">CSS Animations</a><span>/</span>
+        <span>Cards Scroll</span>
+      </nav>
+      <h1>Cards Scroll Animation</h1>
+      <p>Scroll horizontally to see cards animate into view using CSS scroll-snap and view-timeline.</p>
+    </div>
+    <div class="demo-wrapper" style="padding:20px 0; overflow:visible; flex-direction:column;">
+      <p style="color:#666; font-size:0.85rem; margin-bottom:12px; text-align:center;">← Scroll horizontal →</p>
+      <div class="focus-gallery">
+        <div class="scroll-item" style="background:linear-gradient(135deg,#ff4444,#cc0000);">1</div>
+        <div class="scroll-item" style="background:linear-gradient(135deg,#4488ff,#0044cc);">2</div>
+        <div class="scroll-item" style="background:linear-gradient(135deg,#44dd88,#009944);">3</div>
+        <div class="scroll-item" style="background:linear-gradient(135deg,#ff00ff,#9900cc);">4</div>
+        <div class="scroll-item" style="background:linear-gradient(135deg,#ff6b35,#cc3300);">5</div>
+        <div class="scroll-item" style="background:linear-gradient(135deg,#00d9ff,#0066cc);">6</div>
+      </div>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li><strong>scroll-snap-type: x mandatory</strong> + <strong>scroll-snap-align: center</strong></li>
+        <li><strong>animation-timeline: view(x)</strong> activa la animación según visibilidad en scroll</li>
+        <li><strong>scrollbar-width: none</strong> para ocultar la barra de scroll</li>
+        <li>Padding especial para centrar la primera y última carta: <strong>calc(50% - 140px)</strong></li>
+      </ul>
+    </div>
+  </div>
+</main>

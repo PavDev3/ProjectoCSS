@@ -1,0 +1,32 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/css-animations">CSS Animations</a><span>/</span>
+        <span>Border Color</span>
+      </nav>
+      <h1>Border Color Animation</h1>
+      <p>Click or focus on the input to see the animated gradient border appear and rotate continuously.</p>
+    </div>
+    <div class="demo-wrapper" style="flex-direction:column; gap:40px;">
+      <div class="input-container">
+        <div class="border-effect"></div>
+        <input type="email" class="styled-input" placeholder="Enter your email...">
+      </div>
+      <div class="input-container">
+        <div class="border-effect be2"></div>
+        <input type="text" class="styled-input" placeholder="Enter your name...">
+      </div>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li>Div <strong>.border-effect</strong> posicionado absolutamente detrás del input</li>
+        <li>Gradiente multicolor con <strong>background-size: 300%</strong> para animar posición</li>
+        <li><strong>:focus-within</strong> en el contenedor activa la animación</li>
+        <li>Transición de <strong>opacity</strong> de 0 a 1 en el foco</li>
+      </ul>
+    </div>
+  </div>
+</main>

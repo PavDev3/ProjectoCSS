@@ -1,0 +1,42 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/javascript">JavaScript</a><span>/</span>
+        <span>Circular Progress</span>
+      </nav>
+      <h1>Circular Progress Bar</h1>
+      <p>Animated SVG circular progress bars using stroke-dasharray and stroke-dashoffset techniques.</p>
+    </div>
+    <div class="demo-wrapper" style="flex-wrap:wrap; gap:40px;">
+      @for (skill of skills(); track skill.label) {
+        <div class="progress-item">
+          <svg class="progress-svg" viewBox="0 0 160 160" width="160" height="160">
+            <circle class="track" cx="80" cy="80" r="70" />
+            <circle
+              class="bar"
+              cx="80" cy="80" r="70"
+              [style.stroke]="skill.color"
+              [style.stroke-dasharray]="circumference"
+              [style.stroke-dashoffset]="strokeDashoffset(skill.value)"
+            />
+          </svg>
+          <div class="progress-label">
+            <span class="progress-value" [style.color]="skill.color">{{ skill.value }}%</span>
+            <span class="progress-name">{{ skill.label }}</span>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li><strong>stroke-dasharray</strong> = circunferencia total del círculo (2πr)</li>
+        <li><strong>stroke-dashoffset</strong> controla cuánto del trazo es visible</li>
+        <li>Animación CSS en <strong>stroke-dashoffset</strong> de circunferencia a valor final</li>
+        <li><strong>rotate(-90deg)</strong> para que empiece desde arriba (12 en punto)</li>
+      </ul>
+    </div>
+  </div>
+</main>

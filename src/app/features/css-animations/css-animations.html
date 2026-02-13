@@ -1,0 +1,19 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a>
+        <span>/</span>
+        <span>CSS Animations</span>
+      </nav>
+      <span class="section-badge badge-css">CSS</span>
+      <h1>Animaciones CSS</h1>
+      <p>Efectos visuales creados con CSS puro — keyframes, transforms, gradients y selectores modernos.</p>
+    </div>
+    <div class="animations-grid">
+      @for (item of items; track item.route) {
+        <app-component-card [item]="item" />
+      }
+    </div>
+  </div>
+</main>

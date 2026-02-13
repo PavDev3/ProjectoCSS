@@ -1,0 +1,52 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/javascript">JavaScript</a><span>/</span>
+        <span>Theme Toggle</span>
+      </nav>
+      <h1>Theme Toggle</h1>
+      <p>Smooth light/dark mode switch using CSS variables and localStorage to persist the preference.</p>
+    </div>
+    <div class="demo-wrapper" style="flex-direction:column; gap:32px;">
+      <!-- Toggle Switch -->
+      <div class="toggle-wrap">
+        <span class="toggle-icon">☀️</span>
+        <button class="toggle-switch" [class.dark]="isDark()" (click)="toggle()" aria-label="Toggle theme">
+          <span class="toggle-thumb"></span>
+        </button>
+        <span class="toggle-icon">🌙</span>
+      </div>
+
+      <!-- Preview Card -->
+      <div class="preview-card" [class.dark]="isDark()">
+        <div class="preview-header">
+          <div class="preview-avatar"></div>
+          <div class="preview-info">
+            <div class="preview-name">John Developer</div>
+            <div class="preview-role">Frontend Engineer</div>
+          </div>
+        </div>
+        <p class="preview-text">
+          Building amazing web experiences with Angular and CSS animations.
+          Theme: <strong>{{ isDark() ? 'Dark Mode 🌙' : 'Light Mode ☀️' }}</strong>
+        </p>
+        <div class="preview-tags">
+          <span class="preview-tag">Angular</span>
+          <span class="preview-tag">TypeScript</span>
+          <span class="preview-tag">CSS</span>
+        </div>
+      </div>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li><strong>CSS Custom Properties</strong> (variables) cambiadas por clase en el elemento</li>
+        <li><strong>localStorage</strong> para persistir la preferencia entre sesiones</li>
+        <li>Angular <strong>Signal</strong> para reactividad sin necesidad de detectar cambios</li>
+        <li>Transición suave con <strong>transition: all 0.3s ease</strong> en todos los elementos</li>
+      </ul>
+    </div>
+  </div>
+</main>

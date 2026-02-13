@@ -1,0 +1,87 @@
+<main class="page-content">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span>✦</span> Portfolio de Componentes
+      </div>
+      <h1>
+        Efectos visuales con<br>
+        <span class="gradient-text">CSS & JavaScript</span>
+      </h1>
+      <p>
+        Colección de animaciones y componentes interactivos implementados
+        en Angular, inspirados en <a href="https://darkcssweb.com" target="_blank" rel="noopener">DarkCSSWeb</a>.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/css-animations" class="btn btn-primary">
+          Ver CSS Animations
+        </a>
+        <a routerLink="/javascript" class="btn btn-secondary">
+          Ver JavaScript
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">9</span>
+          <span class="stat-label">CSS Animations</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">7</span>
+          <span class="stat-label">JS Components</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">Angular 20</span>
+          <span class="stat-label">Framework</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS Section -->
+  <section class="section-gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-css">CSS</span>
+        <h2>Animaciones CSS</h2>
+        <p>Efectos visuales creados con CSS puro — keyframes, transforms, gradients y selectores modernos.</p>
+        <a routerLink="/css-animations" class="see-all">Ver todas →</a>
+      </div>
+      <div class="animations-grid">
+        @for (item of cssItems; track item.route) {
+          <app-component-card [item]="item" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- JS Section -->
+  <section class="section-gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge badge-js">JS</span>
+        <h2>Componentes JavaScript</h2>
+        <p>Componentes interactivos implementados con TypeScript y Angular Signals.</p>
+        <a routerLink="/javascript" class="see-all">Ver todos →</a>
+      </div>
+      <div class="animations-grid">
+        @for (item of jsItems; track item.route) {
+          <app-component-card [item]="item" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Inspirado en <a href="https://darkcssweb.com" target="_blank" rel="noopener">DarkCSSWeb.com</a> · Construido con Angular 20</p>
+    </div>
+  </footer>
+</main>

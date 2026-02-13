@@ -1,0 +1,19 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a>
+        <span>/</span>
+        <span>JavaScript</span>
+      </nav>
+      <span class="section-badge badge-js">JS</span>
+      <h1>Componentes JavaScript</h1>
+      <p>Componentes interactivos implementados con TypeScript y Angular Signals.</p>
+    </div>
+    <div class="animations-grid">
+      @for (item of items; track item.route) {
+        <app-component-card [item]="item" />
+      }
+    </div>
+  </div>
+</main>

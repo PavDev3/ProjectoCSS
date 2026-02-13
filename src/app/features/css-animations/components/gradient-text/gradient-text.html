@@ -1,0 +1,27 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/css-animations">CSS Animations</a><span>/</span>
+        <span>Gradient Text</span>
+      </nav>
+      <h1>Gradient Text Animation</h1>
+      <p>Hover over the text to see the gradient sweep effect using background-clip: text and a width transition.</p>
+    </div>
+    <div class="demo-wrapper" style="flex-direction:column; gap:40px;">
+      <h2 class="gradient-hover" data-text="HOVER ME">HOVER ME</h2>
+      <h2 class="gradient-hover g2" data-text="CSS MAGIC">CSS MAGIC</h2>
+      <h2 class="gradient-hover g3" data-text="PORTFOLIO">PORTFOLIO</h2>
+    </div>
+    <div class="tech-info">
+      <h3>Técnica usada</h3>
+      <ul>
+        <li><strong>background: linear-gradient()</strong> aplicado al texto</li>
+        <li><strong>background-clip: text</strong> + <strong>color: transparent</strong></li>
+        <li>Pseudo-elemento <strong>::before</strong> con width transitioning de 0% a 100%</li>
+        <li>El gradiente se "revela" al hacer hover gracias a la animación de ancho</li>
+      </ul>
+    </div>
+  </div>
+</main>

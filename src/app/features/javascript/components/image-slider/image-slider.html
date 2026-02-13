@@ -1,0 +1,32 @@
+<main class="page-content">
+  <div class="container animation-page">
+    <div class="page-header">
+      <nav class="breadcrumb">
+        <a routerLink="/">Home</a><span>/</span>
+        <a routerLink="/javascript">JavaScript</a><span>/</span>
+        <span>Image Slider</span>
+      </nav>
+      <h1>Image Slider</h1>
+      <p>Auto-playing carousel with smooth CSS transitions, manual navigation and dot indicators.</p>
+    </div>
+    <div class="demo-wrapper" style="padding:0; overflow:hidden;">
+      <div class="slider">
+        <div class="slides-track" [style.transform]="'translateX(-' + current() * 100 + '%)'">
+          @for (slide of slides; track slide.title) {
+            <div class="slide" [style.background]="slide.bg">
+              <h2>{{ slide.title }}</h2>
+              <p>{{ slide.subtitle }}</p>
+            </div>
+          }
+        </div>
+        <button class="nav-btn prev" (click)="prev()">&#8249;</button>
+        <button class="nav-btn next" (click)="next()">&#8250;</button>
+        <div class="dots">
+          @for (slide of slides; track $index) {
+            <button class="dot" [class.active]="current() === $index" (click)="goTo($index)"></button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
